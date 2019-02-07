@@ -13,7 +13,7 @@ public class AddEmployeeTransactionManagement extends AddEmployeeTransManagement
 	private PlatformTransactionManager transactionManager;
 	
 	@Override
-	public void hireNewEmployee(int id, String name, int salary) {
+	public void hireNewEmployee(int id, String name, int salary) throws Exception {
 		TransactionDefinition transactionDef = new DefaultTransactionDefinition();
 		TransactionStatus transactionStatus = transactionManager.getTransaction(transactionDef);
 		try {
